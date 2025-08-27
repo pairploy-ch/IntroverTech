@@ -1200,7 +1200,7 @@ section {
   text-align: center;
   display: inline-block;
   background-color: #ffffff;
-  box-shadow: 0 7px 25px rgb(192 1 19 / 27%);
+  /* box-shadow: 0 7px 25px rgb(192 1 19 / 27%); */
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border: none;
@@ -1248,7 +1248,7 @@ section {
   border-radius: 30px;
   display: inline-block;
   background-color: #FFBF00;
-  box-shadow: 0 7px 25px rgb(192 1 19 / 27%);
+  /* box-shadow: 0 7px 25px rgb(192 1 19 / 27%); */
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border: none;
