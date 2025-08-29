@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blogs - RedTheme - IT Website Template</title>
+  <title>Portfolio - RedTheme - IT Website Template</title>
   <meta content="" name="RedTheme - IT Website Template">
   <meta name="description"
     content="RedTheme - IT Website Template - IT Solutions & Business Services Multipurpose Responsive HTML5 Bootstrap5 Website Template">
@@ -41,7 +41,7 @@
   <div id="preloader"></div>
   <!-- End Preloader -->
 
-  <!-- Start Header -->
+   <!-- Start Header -->
   <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -50,28 +50,21 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html" class="">About Us</a></li>
-          <li class="dropdown"><a href="services.html"><span>Services</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a  href="about.html" class="">About Us</a></li>
+          <li><a href="services.html"><span>Services</span> </a>
+
+          </li>
+          <li><a class="active" href="works.html"><span>Works</span></a>
             <ul>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="single-service.html">Single Service</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
+              <!-- <li><a href="portfolio.html">Projects</a></li> -->
+              <!-- <li><a href="single-project.html">Single Project</a></li> -->
             </ul>
           </li>
-          <li class="dropdown"><a href="portfolio.html"><span>Portfolio</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <!-- <li><a href="team.html" class="">Team</a></li> -->
+          <!-- <li><a href="blogs.html"><span>Blogs</span> </a> -->
             <ul>
-              <li><a href="portfolio.html">Projects</a></li>
-              <li><a href="single-project.html">Single Project</a></li>
-            </ul>
-          </li>
-          <li><a href="team.html" class="">Team</a></li>
-          <li class="dropdown"><a href="blogs.html"><span>Blogs</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="blogs.html">Blogs Grid</a></li>
-              <li><a href="single-blog.html">Blog Details</a></li>
+              <!-- <li><a href="blogs.html">Blogs Grid</a></li> -->
+              <!-- <li><a href="single-blog.html">Blog Details</a></li> -->
             </ul>
           </li>
         </ul>
@@ -89,8 +82,8 @@
       <div class="container position-relative">
         <div class="row d-flex justify-content-start">
           <div class="col-lg-8 text-left">
-            <h2>Blogs</h2>
-            <p>Our latest blog posts, featuring images and videos to enhance your reading experience.</p>
+            <h2>Our Works</h2>
+            <p>Showcases a variety of projects that we have completed for our clients</p>
           </div>
         </div>
       </div>
@@ -99,7 +92,7 @@
       <div class="container">
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Blogs</li>
+          <li>Our Works</li>
         </ol>
       </div>
     </nav>
@@ -107,8 +100,21 @@
 
   <!-- Page Main -->
   <div class="single-page">
-    <!--  Recent Blog Posts Section  -->
-    <section id="recent-posts" class="recent-posts sections-bg">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+          data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <ul class="portfolio-flters">
+              <li data-filter="*" class="filter-active">All <span></span></li>
+              <li data-filter=".filter-app">Works<span></span></li>
+              <li data-filter=".filter-product">Blogs<span></span></li>
+           
+            </ul><!-- End Portfolio Filters -->
+          </div>
+
+         <section id="recent-posts" class="recent-posts">
       <div class="container" data-aos="fade-up">
         <div class="row gy-4">
           <div class="col-lg-4">
@@ -116,13 +122,13 @@
               <div class="post-img">
                 <img src="assets/images/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
-              <p class="post-category">Domain & Hosting</p>
+              <p class="post-category">logsDomain & Hosting</p>
               <h2 class="title">
                 <a href="single-blog.html">How to host website on any hosting provider?</a>
               </h2>
               <div class="d-flex align-items-center">
                 <div class="post-meta">
-                  <p class="post-author">William Smith</p>
+                  <p class="post-author">Admin</p>
                   <p class="post-date">
                     <time datetime="2022-01-01">Feb 1, 2022</time>
                   </p>
@@ -138,13 +144,13 @@
               <div class="post-img">
                 <img src="assets/images/blog/blog-2.jpg" alt="" class="img-fluid">
               </div>
-              <p class="post-category">Advertisement</p>
+              <p class="post-category">Works</p>
               <h2 class="title">
                 <a href="single-blog.html">How to create add on google adwords?</a>
               </h2>
               <div class="d-flex align-items-center">
                 <div class="post-meta">
-                  <p class="post-author">Ana Will</p>
+                  <p class="post-author">Admin</p>
                   <p class="post-date">
                     <time datetime="2022-01-01">Oct 5, 2022</time>
                   </p>
@@ -161,13 +167,13 @@
               <div class="post-img">
                 <img src="assets/images/blog/blog-3.jpg" alt="" class="img-fluid">
               </div>
-              <p class="post-category">Marketing</p>
+              <p class="post-category">Works</p>
               <h2 class="title">
                 <a href="single-blog.html">What is digital marketing and why is important?</a>
               </h2>
               <div class="d-flex align-items-center">
                 <div class="post-meta">
-                  <p class="post-author">Jhoni</p>
+                  <p class="post-author">Admin</p>
                   <p class="post-date">
                     <time datetime="2022-01-01">Dec 22, 2022</time>
                   </p>
@@ -184,7 +190,11 @@
 
       </div>
     </section>
-    <!-- End Recent Blog Posts Section -->
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
   </div>
   <!-- Page Main -->
 

@@ -88,7 +88,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  /* color: #ffffff; */
   text-decoration: none;
 }
 
@@ -1154,7 +1154,7 @@ section {
   border-radius: 5px;
   display: inline-block;
   background-color: #093EE1;
-  box-shadow: 0 7px 25px rgb(192 1 19 / 27%);
+  box-shadow: 0 7px 25px rgba(147, 147, 147, 0.27);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border: none;
@@ -2192,7 +2192,7 @@ section {
   text-align: center;
   display: inline-block;
   background-color: #ffffff;
-  box-shadow: 0 7px 25px rgb(192 1 19 / 27%);
+  box-shadow: 0 7px 25px rgba(69, 69, 69, 0.27);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border: none;
