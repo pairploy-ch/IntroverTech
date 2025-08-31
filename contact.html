@@ -181,12 +181,13 @@
                       </div>
                       <div class="messages">
                         <div class="alert alert alert-success alert-dismissable alert-dismissable hidden"
-                          id="msgSubmit"><button type="button" class="close" data-dismiss="alert"
-                            aria-hidden="true">&times;</button> Thank You! your message has been sent. </div>
+                          id="msgSubmit"> Thank You! your message has been sent. </div>
                       </div>
                     </div>
                   </div>
                 </form>
+
+
 
                 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -199,10 +200,14 @@
                     .addEventListener("submit", function (e) {
                       e.preventDefault();
 
-                      emailjs.sendForm("service_24t245d","template_sk98ovs", this)
-                      // emailjs.send("service_24t245d","template_sk98ovs");
-                        .then(() => {
-                          // alert("ส่งข้อความเรียบร้อยแล้ว!");
+                      emailjs.sendForm("service_24t245d", "template_sk98ovs", this)
+                        // emailjs.send("service_24t245d","template_sk98ovs");
+                        .then(() => {   
+                          document.getElementById("msgSubmit").classList.remove("hidden");
+                          this.reset();
+                          setTimeout(() => {
+                            document.getElementById("msgSubmit").classList.add("hidden");
+                          }, 5000);
                         }, (err) => {
                           // alert("ส่งไม่สำเร็จ: " + JSON.stringify(err));
                         });
@@ -239,7 +244,7 @@
               </div>
               <div class="footer-social-icon">
                 <span>Follow us</span>
-                <a href="#" class="line"><img src="/assets/images/icon-line.svg" alt="" srcset=""
+                <a href="#" class="line mb-2"><img src="/assets/images/icon-line.svg" alt="" srcset=""
                     style="width: 18px;"></a>
                 <a href="https://www.facebook.com/IntrovertechOfficial" class="facebook"><i
                     class="bi bi-facebook"></i></a>
@@ -255,11 +260,11 @@
                 <h3>Services</h3>
               </div>
               <ul class="list">
-                <li><a href="web-scraping.html">Website Scraping</a></li>
-                <li><a href="indicators.html">Indicators</a></li>
-                <li><a href="desktop-app.html">Desktop Application</a></li>
-                <li><a href="web-app.html">Web Application</a></li>
-                <li><a href="ai-automation.html">AI Workflow Automation</a></li>
+                <li><a href="./services/ai-automation.html">Website Scraping</a></li>
+                <li><a href="./services/indicatos.html">Indicators</a></li>
+                <li><a href="./services/desktop-app.html">Desktop Application</a></li>
+                <li><a href="./services/web-app.html">Web Application</a></li>
+                <li><a href="./services/ai-automation.html">AI Workflow Automation</a></li>
 
               </ul>
             </div>
