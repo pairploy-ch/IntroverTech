@@ -1,29 +1,36 @@
 <?php
-    /*  
-        Template name    : RedTheme - IT Website Template
-        Author           : ZRTHEMES
-        Version          : 1.0
-        File Description : Contact PHP file of the template
-    */
-    //this is your Email address
-    //kinldy update your email here
-    $to = "info@example.com"; 
-    $from = $_POST['email']; 
-    //this is the sender's Email address
-    //this is firt name
-    $first_name = $_POST['name'];
-    //this is last name
-    $last_name = $_POST['name'];
-    //this is subject
-    $subject = "Form Subject Here: ";
-    //this is message body
-    $message = "Message " . $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // กำหนดอีเมลผู้รับ (ของคุณ)
+    $to = "pairploy.chp@gmail.com"; 
 
-    $headers = "From:" . $from . "\r\n" .
-        'Reply-To: webmaster@example.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    // ดึงค่าจากฟอร์ม
+    $name    = isset($_POST['name']) ? strip_tags($_POST['name']) : '';
+    $email   = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
+    $subject = isset($_POST['subject']) ? strip_tags($_POST['subject']) : 'No Subject';
+    $message = isset($_POST['message']) ? strip_tags($_POST['message']) : '';
 
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject,$message,$headers2); 
+    // ป้องกันช่องว่างเปล่า
+    if(empty($name) || empty($email) || empty($message)){
+        die("กรุณากรอกข้อมูลให้ครบ");
+    }
+
+    // เนื้อหาอีเมล
+    $body = "คุณได้รับข้อความใหม่จากฟอร์มติดต่อ:\n\n";
+    $body .= "ชื่อ: $name\n";
+    $body .= "อีเมล: $email\n";
+    $body .= "เรื่อง: $subject\n";
+    $body .= "ข้อความ:\n$message\n";
+
+    // Header
+    $headers  = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+
+    // ส่งอีเมล
+    if(mail($to, $subject, $body, $headers)){
+        echo "ส่งข้อความเรียบร้อยแล้ว!";
+    } else {
+        echo "เกิดข้อผิดพลาดในการส่งข้อความ กรุณาลองใหม่อีกครั้ง";
+    }
+}
 ?>

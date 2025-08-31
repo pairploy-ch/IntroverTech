@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact - RedTheme - IT Website Template</title>
-  <meta content="" name="RedTheme - IT Website Template">
+  <title>Contact - Introvertech - IT Website Template</title>
+  <meta content="" name="Introvertech - IT Website Template">
   <meta name="description"
-    content="RedTheme - IT Website Template - IT Solutions & Business Services Multipurpose Responsive HTML5 Bootstrap5 Website Template">
+    content="Introvertech - IT Website Template - IT Solutions & Business Services Multipurpose Responsive HTML5 Bootstrap5 Website Template">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta content="" name="ZRTHEMES">
 
@@ -51,28 +51,21 @@
         <ul>
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="about.html" class="">About Us</a></li>
-          <li class="dropdown"><a href="services.html"><span>Services</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a href="services.html"><span>Services</span> </a>
+
+          </li>
+          <li><a href="works.html"><span>Works</span></a>
             <ul>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="single-service.html">Single Service</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
+              <!-- <li><a href="portfolio.html">Projects</a></li> -->
+              <!-- <li><a href="single-project.html">Single Project</a></li> -->
             </ul>
           </li>
-          <li class="dropdown"><a href="portfolio.html"><span>Portfolio</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="portfolio.html">Projects</a></li>
-              <li><a href="single-project.html">Single Project</a></li>
-            </ul>
-          </li>
-          <li><a href="team.html" class="">Team</a></li>
-          <li class="dropdown"><a href="blogs.html"><span>Blogs</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="blogs.html">Blogs Grid</a></li>
-              <li><a href="single-blog.html">Blog Details</a></li>
-            </ul>
+          <!-- <li><a href="team.html" class="">Team</a></li> -->
+          <!-- <li><a href="blogs.html"><span>Blogs</span> </a> -->
+          <ul>
+            <!-- <li><a href="blogs.html">Blogs Grid</a></li> -->
+            <!-- <li><a href="single-blog.html">Blog Details</a></li> -->
+          </ul>
           </li>
         </ul>
       </nav><!-- .navbar -->
@@ -139,7 +132,7 @@
                   <div class="single-contact-info-box">
                     <div class="contact-info">
                       <h6>Email:</h6>
-                      <a class="text-black" href="http://">info@introvertech.com</a>
+                      <a class="text-black" href="mailto:info@introvertech.com">info@introvertech.com</a>
 
 
                     </div>
@@ -151,7 +144,7 @@
           <div class="col-lg-8 col-md-12" data-aos="fade-left">
             <div class="contact-form-box contact-form contact-form-3">
               <div class="form-container-box">
-                <form class="contact-form form" id="ajax-contact" method="post" action="assets/phpscripts/contact.php">
+                <form class="contact-form form" id="contact-form">
                   <div class="controls">
                     <div class="row">
                       <div class="col-md-6">
@@ -194,6 +187,27 @@
                     </div>
                   </div>
                 </form>
+
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                <script>
+                  (function () {
+                    emailjs.init("QMJWBtTioimOWgeID"); // เอามาจาก EmailJS dashboard
+                  })();
+
+                  document.getElementById("contact-form")
+                    .addEventListener("submit", function (e) {
+                      e.preventDefault();
+
+                      emailjs.sendForm("service_24t245d","template_sk98ovs", this)
+                      // emailjs.send("service_24t245d","template_sk98ovs");
+                        .then(() => {
+                          // alert("ส่งข้อความเรียบร้อยแล้ว!");
+                        }, (err) => {
+                          // alert("ส่งไม่สำเร็จ: " + JSON.stringify(err));
+                        });
+                    });
+                </script>
               </div>
             </div>
           </div>
@@ -211,62 +225,57 @@
     <div class="container">
       <div class="footer-content pb-5">
         <div class="row">
-          <div class="col-xl-4 col-lg-4 mb-50">
+          <div class="col-xl-6 col-lg-6 mb-50">
             <div class="footer-widget">
               <div class="footer-logo">
                 <a href="#" class="logo d-flex align-items-center">
-                  <img src="assets/images/logo.png" alt="logo">
+                  <img src="assets/images/logo.png" alt="logo" style="width: 20%;">
                 </a>
               </div>
               <div class="footer-text">
-                <p>At RedTheme we are passionate about providing businesses with the IT solutions they need to succeed
+                <p>At Introvertech we are passionate about providing businesses with the IT solutions they need to
+                  succeed
                   in today's competitive marketplace.</p>
               </div>
               <div class="footer-social-icon">
                 <span>Follow us</span>
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="line"><img src="/assets/images/icon-line.svg" alt="" srcset=""
+                    style="width: 18px;"></a>
+                <a href="https://www.facebook.com/IntrovertechOfficial" class="facebook"><i
+                    class="bi bi-facebook"></i></a>
+                <a href="mailto:info@introvertech.com" class="email"><i class="bi bi-envelope-fill"></i></a>
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
             <div class="service-widget footer-widget">
               <div class="footer-widget-heading">
                 <h3>Services</h3>
               </div>
               <ul class="list">
-                <li><a href="single-service.html">Web Design</a></li>
-                <li><a href="single-service.html">App Developemnt</a></li>
-                <li><a href="single-service.html">Cloud Services</a></li>
-                <li><a href="single-service.html">Domain And Hosting</a></li>
-                <li><a href="single-service.html">Seo Optimization</a></li>
-                <li><a href="single-service.html">Social Media</a></li>
-                <li><a href="single-service.html">Data Secure</a></li>
-                <li><a href="single-service.html">Web Hosting</a></li>
+                <li><a href="web-scraping.html">Website Scraping</a></li>
+                <li><a href="indicators.html">Indicators</a></li>
+                <li><a href="desktop-app.html">Desktop Application</a></li>
+                <li><a href="web-app.html">Web Application</a></li>
+                <li><a href="ai-automation.html">AI Workflow Automation</a></li>
+
               </ul>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
             <div class="service-widget footer-widget">
               <div class="footer-widget-heading">
                 <h3>Information</h3>
               </div>
               <ul class="list">
                 <li><a href="about.html">About</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="single-blog.html">Single Blog</a></li>
-                <li><a href="page.html">Terms &amp; Conditions</a></li>
-                <li><a href="page.html">Sample Page</a></li>
+                <li><a href="works.html">Works</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <!-- <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
             <div class="contact-widget footer-widget mb-25">
               <div class="footer-widget-heading">
                 <h3>Contacts</h3>
@@ -291,12 +300,12 @@
                 </form>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="row">
           <div class="col-xl-12 col-lg-12 text-center">
             <div class="copyright-text">
-              <p>RedTheme<span>.</span> © 2024 - Designed by <a
+              <p>Introvertech<span>.</span> © 2024 - Designed by <a
                   href="https://www.templatemonster.com/authors/zrthemes/">ZRTHEMES</a></p>
             </div>
           </div>
